@@ -10,7 +10,7 @@ a {
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
   font-size: 18px;
-  line-height: 1.16667;
+  line-height: 1.17;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #4d5ae5;
@@ -31,7 +31,7 @@ nav a {
 .nav-list:focus {
   color: #404bbf;
 }
-address a {
+.contacts a {
   font-weight: 400;
   font-size: 16px;
   line-height: 1.5;
@@ -39,10 +39,10 @@ address a {
   color: #434455;
   font-style: normal;
 }
-address a:focus {
+.contacts-list:focus {
   color: #404bbf;
 }
-address a:hover {
+.contacts-list:hover {
   color: #404bbf;
 }
 .hero {
@@ -50,7 +50,7 @@ address a:hover {
   text-align: center;
   background-color: #2e2f42;
 }
-.main-ititle {
+.main-title {
   font-size: 56px;
   line-height: 1.07;
   letter-spacing: 0.02em;
@@ -79,12 +79,14 @@ address a:hover {
   line-height: 1.11;
   letter-spacing: 0.02em;
   text-transform: capitalize;
+  color: #2e2f42;
 }
 .section-subtitle {
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
   letter-spacing: 0.02em;
+  color: #2e2f42;
 }
 .section-text {
   font-weight: 400;
