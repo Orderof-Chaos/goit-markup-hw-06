@@ -37,6 +37,7 @@ address a {
 .hero button {
   color: #fff;
   background-color: #4d5ae5;
+  cursor: pointer;
 }
 .section-title {
   font-weight: 700;
@@ -73,7 +74,6 @@ footer a {
   color: #f4f4fd;
 }
 footer p {
-  font-weight: 400;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
