@@ -3,8 +3,31 @@ body {
   color: #434455;
   background-color: #ffffff;
 }
+ul {
+  list-style: none;
+}
+.section {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+.container {
+  max-width: 1158px;
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: 0;
+  margin-right: 0;
+}
 a {
   text-decoration: none;
+}
+img {
+  display: block;
+}
+h1,
+h2,
+h3,
+p {
+  margin: 0 0 0 0;
 }
 .logo {
   font-family: 'Raleway', sans-serif;
@@ -17,6 +40,12 @@ a {
 }
 .accent {
   color: #2e2f42;
+}
+nav {
+  display: flex;
+}
+nav ul {
+  display: flex;
 }
 nav a {
   font-weight: 500;
