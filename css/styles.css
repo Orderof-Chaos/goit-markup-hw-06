@@ -58,7 +58,7 @@ body {
 .container {
   max-width: 1158px;
   padding: 0 15px;
-  margin: 0;
+  margin: 0 auto;
 }
 header .container {
   display: flex;
@@ -141,18 +141,12 @@ ul {
   display: flex;
   gap: 24px;
 }
-.advantages-list-item {
-  flex-basis: calc((100% - 3 * 24px) / 4);
-}
+
 .team-list {
   display: flex;
   gap: 24px;
 }
-.team-list-item {
-  width: calc((100% - 72px) / 4);
-  background-color: #ffffff;
-  border-radius: 0px 0px 4px 4px;
-}
+
 .team-info {
   padding: 32px 0;
 }
@@ -187,9 +181,7 @@ ul {
   column-gap: 24px;
   row-gap: 48px;
 }
-.portfolio-list-item {
-  width: calc((100% - 48px) / 3);
-}
+
 .portfolio-info {
   padding: 32px 16px;
   border: 1px solid #e7e9fc;
@@ -220,6 +212,27 @@ ul {
 .footer-accent {
   color: #f4f4fd;
 }
-.advantages .section-title {
-  visibility: hidden;
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+.advantages-list-item {
+  width: calc((100% - 72px) / 4);
+}
+.portfolio-list-item {
+  width: calc((100% - 48px) / 3);
+}
+.team-list-item {
+  width: calc((100% - 72px) / 4);
+  background-color: #ffffff;
+  border-radius: 0px 0px 4px 4px;
 }
