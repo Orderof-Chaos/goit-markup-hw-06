@@ -464,7 +464,7 @@ footer .social-link:focus {
     0 2px 1px 0 rgba(0, 0, 0, 0.2);
   background-color: #fcfcfc;
   transform: translate(-50%, -50%);
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   padding: 72px 24px 24px 24px;
 }
 .backdrop.is-open {
@@ -591,6 +591,16 @@ footer .social-link:focus {
   padding: 8px 16px 0 16px;
   resize: none;
   outline: none;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: rgba(46, 47, 66, 0.4);
+  background-color: transparent;
+  padding: 8px 16px;
+  outline: transparent;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-form-textarea::placeholder {
@@ -607,6 +617,13 @@ footer .social-link:focus {
   border-color: #4d5ae5;
 }
 
+.modal-cont-checkbox {
+  margin-bottom: 24px;
+}
+
+.checkbox {
+}
+
 .custom-checkbox {
   border-radius: 2px;
   border: 1px solid rgba(46, 47, 66, 0.4);
@@ -616,11 +633,16 @@ footer .social-link:focus {
   justify-content: center;
   align-items: center;
   margin-right: 8px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  fill: transparent;
 }
 
 .checkbox:checked + .custom-label-user-checkbox > .custom-checkbox {
+  border: none;
   background-color: #404bbf;
-  border-color: #404bbf;
+  fill: #f4f4fd;
 }
 
 .custom-label-user-checkbox {
@@ -628,7 +650,7 @@ footer .social-link:focus {
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
   font-size: 12px;
-  line-height: 1.16667;
+  line-height: 1.17;
   letter-spacing: 0.04em;
   color: #8e8f99;
 }
@@ -652,7 +674,6 @@ footer .social-link:focus {
   gap: 10px;
   border-radius: 4px;
   padding: 16px 32px;
-  width: 169px;
   height: 56px;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
   background: #4d5ae5;
@@ -665,6 +686,9 @@ footer .social-link:focus {
   color: #fff;
   outline: none;
   border: none;
+  min-width: 169px;
+  cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* #endregion backdrop-modal */
