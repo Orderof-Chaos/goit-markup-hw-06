@@ -461,7 +461,7 @@
         <div class="subscribe-box">
           <p class="subscribe-text">Subscribe</p>
           <form class="subscribe-form">
-            <label for="subscribe-label">
+            <label class="subscribe-label" for="subscribe-mail">
               <input
                 class="subscribe-input"
                 type="email"
@@ -493,8 +493,13 @@
           <div class="modal-form-wrapper">
             <label class="modal-form-label" for="user-name">Name</label>
             <div class="modal-cont-input">
-              <input type="text" class="modal-input" id="user-name" />
-              <svg class="modal-icon" height="12" width="12">
+              <input
+                type="text"
+                class="modal-input"
+                id="user-name"
+                name="user-name"
+              />
+              <svg class="modal-icon" height="18" width="24">
                 <use href="./images/icons.svg#icon-user"></use>
               </svg>
             </div>
@@ -502,8 +507,13 @@
           <div class="modal-form-wrapper">
             <label class="modal-form-label" for="user-tel">Phone</label>
             <div class="modal-cont-input">
-              <input type="tel" class="modal-input" id="user-tel" />
-              <svg class="modal-icon" height="13" width="13">
+              <input
+                type="tel"
+                class="modal-input"
+                id="user-tel"
+                name="user-tel"
+              />
+              <svg class="modal-icon" height="18" width="24">
                 <use href="./images/icons.svg#icon-tell"></use>
               </svg>
             </div>
@@ -511,23 +521,25 @@
           <div class="modal-form-wrapper">
             <label class="modal-form-label" for="user-mail">Email</label>
             <div class="modal-cont-input">
-              <input type="email" class="modal-input" id="user-mail" />
-              <svg class="modal-icon" height="16" width="12">
+              <input
+                type="email"
+                class="modal-input"
+                id="user-mail"
+                name="user-mail"
+              />
+              <svg class="modal-icon" height="18" width="24">
                 <use href="./images/icons.svg#icon-mail"></use>
               </svg>
             </div>
           </div>
           <div class="modal-form-wrapper-comment">
-            <label class="modal-form-label-comment" for="user-comment"
-              >comment</label
-            >
-            <div class="modal-cont-input">
-              <textarea
-                class="modal-form-textarea"
-                placeholder="Text input"
-                id="user-comment"
-              ></textarea>
-            </div>
+            <label class="modal-form-label" for="user-comment">comment</label>
+            <textarea
+              class="modal-form-textarea"
+              placeholder="Text input"
+              id="user-comment"
+              name="user-comment"
+            ></textarea>
           </div>
           <div class="modal-cont-chekbox">
             <input

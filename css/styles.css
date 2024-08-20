@@ -406,6 +406,7 @@ footer .social-link:focus {
   color: #fff;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
+  padding-left: 16px;
 }
 
 .subscribe-input::placeholder {
@@ -428,6 +429,7 @@ footer .social-link:focus {
   background-color: #4d5ae5;
   border: none;
   border-radius: 4px;
+  cursor: pointer;
 }
 
 .subscribe-svg {
@@ -448,9 +450,8 @@ footer .social-link:focus {
   visibility: hidden;
   pointer-events: none;
   opacity: 0;
-  transition: visibility 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    pointer-events 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal {
   top: 50%;
@@ -463,7 +464,8 @@ footer .social-link:focus {
     0 2px 1px 0 rgba(0, 0, 0, 0.2);
   background-color: #fcfcfc;
   transform: translate(-50%, -50%);
-  padding: 24px;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 72px 24px 24px 24px;
 }
 .backdrop.is-open {
   visibility: visible;
@@ -471,6 +473,9 @@ footer .social-link:focus {
   opacity: 1;
 }
 .close-btn {
+  position: absolute;
+  top: 24px;
+  right: 24px;
   box-sizing: border-box;
   border-radius: 50%;
   background-color: #e7e9fc;
@@ -484,9 +489,13 @@ footer .social-link:focus {
   justify-content: center;
   line-height: 0;
   padding: 0;
+  cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .close-svg {
   fill: #2e2f42;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .close-btn:hover,
 .close-btn:focus {
@@ -526,9 +535,11 @@ footer .social-link:focus {
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
   font-size: 12px;
-  line-height: 1.16667;
+  line-height: 1.17;
   letter-spacing: 0.04em;
   color: #8e8f99;
+  display: block;
+  margin-bottom: 4px;
 }
 
 .modal-cont-input {
@@ -544,6 +555,8 @@ footer .social-link:focus {
   padding-left: 38px;
   outline: none;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  background-color: transparent;
+  outline: transparent;
 }
 
 .modal-input:focus,
@@ -560,24 +573,13 @@ footer .social-link:focus {
   fill: #2e2f42;
   position: absolute;
   top: 50%;
-  left: 19px;
+  left: 16px;
   transform: translateY(-50%);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-form-wrapper-comment {
   margin-bottom: 16px;
-}
-
-.modal-form-label-comment {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 1.16667;
-  letter-spacing: 0.04em;
-  color: #8e8f99;
-  display: block;
-  margin-bottom: 4px;
 }
 
 .modal-form-textarea {
