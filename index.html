@@ -459,22 +459,24 @@
           </ul>
         </div>
         <div class="subscribe-box">
-          <form>
-            <label for="subscribe-mail">Subscribe</label>
-            <input
-              class="subscribe-input"
-              type="email"
-              placeholder="E-mail"
-              id="subscribe-mail"
-            />
+          <p class="subscribe-text">Subscribe</p>
+          <form class="subscribe-form">
+            <label for="subscribe-label">
+              <input
+                class="subscribe-input"
+                type="email"
+                name="email-for-subscribe"
+                placeholder="E-mail"
+                id="subscribe-mail"
+            /></label>
+            <button type="submit" class="subscribe-button">
+              Subscribe
+              <svg class="subscribe-svg" height="24" width="24">
+                <use href="./images/icons.svg#icon-send"></use>
+              </svg>
+            </button>
           </form>
         </div>
-        <button type="submit">
-          Subscribe
-          <svg class="subscribe-svg" height="20" width="24">
-            <use href="./images/icons.svg#icon-send"></use>
-          </svg>
-        </button>
       </div>
     </footer>
     <div class="backdrop is-open">
