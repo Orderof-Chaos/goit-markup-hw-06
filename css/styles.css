@@ -375,6 +375,7 @@ footer .social-link:focus {
 .subscribe-box {
   display: flex;
   flex-direction: column;
+  margin-left: auto;
 }
 
 .subscribe-text {
@@ -434,6 +435,7 @@ footer .social-link:focus {
 
 .subscribe-svg {
   margin-left: 16px;
+  fill: #fff;
 }
 
 /* #region backdrop-modal */
