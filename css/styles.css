@@ -805,7 +805,7 @@ footer .social-link:focus {
   }
 }
 @media screen and (min-width: 768px) {
-  .hed .container {
+  .container {
     max-width: 736px;
     flex-wrap: wrap;
     gap: 24px;
