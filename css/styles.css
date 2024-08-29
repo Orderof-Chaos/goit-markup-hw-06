@@ -793,7 +793,7 @@ footer .social-link:focus {
 }
 
 /* #endregion backdrop-modal */
-@media (max-width: 767px) {
+@media screen and (max-width: 767px) {
   .top-nav-list {
     display: none;
   }
@@ -804,7 +804,7 @@ footer .social-link:focus {
     flex-direction: row;
   }
 }
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) {
   .hed .container {
     max-width: 736px;
     flex-wrap: wrap;
@@ -873,7 +873,7 @@ footer .social-link:focus {
     max-width: 264px;
   }
 }
-@media (min-width: 1440px) {
+@media screen and (min-width: 1440px) {
   .section {
     margin-top: 120px;
     margin-bottom: 120px;
