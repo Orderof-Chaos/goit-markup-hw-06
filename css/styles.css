@@ -65,14 +65,16 @@ body {
 .contacts {
   font-style: normal;
   margin-left: auto;
+  margin-right: 0;
 }
 .top-contacts-list {
   display: flex;
   gap: 40px;
+  flex-direction: column;
 }
 .contacts-list {
   font-weight: 400;
-  font-size: 16px;
+  font-size: 12px;
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #434455;
@@ -489,9 +491,7 @@ footer .social-link:focus {
   display: flex;
   flex-direction: column;
   gap: 16px;
-}
-
-.subscribe-label {
+  align-items: center;
 }
 
 .subscribe-input {
@@ -514,7 +514,7 @@ footer .social-link:focus {
 }
 
 .subscribe-button {
-  min-width: 165px;
+  width: 165px;
   height: 40px;
   display: flex;
   justify-content: center;
@@ -559,8 +559,10 @@ footer .social-link:focus {
   left: 50%;
   position: absolute;
   border-radius: 4px;
-  width: 408px;
-  min-height: 584px;
+  width: 288px;
+  min-height: 683px;
+  /* width: 408px;
+  min-height: 584px; */
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12),
     0 2px 1px 0 rgba(0, 0, 0, 0.2);
   background-color: #fcfcfc;
@@ -810,6 +812,35 @@ footer .social-link:focus {
     flex-wrap: wrap;
     gap: 24px;
   }
+  .top {
+    height: 72px;
+  }
+  .top .container {
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+  .contacts {
+    flex-direction: column;
+  }
+  .top-contacts-list {
+    height: 40px;
+    gap: 12px;
+  }
+
+  .top-contacts-list li {
+    height: 14px;
+  }
+
+  .contacts-list {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    color: #434455;
+  }
+  .header-mobile-icon {
+    display: none;
+  }
   .hero .container {
     flex-direction: column;
   }
@@ -872,6 +903,10 @@ footer .social-link:focus {
   .footer-left {
     max-width: 264px;
   }
+  .modal {
+    width: 408px;
+    min-height: 584px;
+  }
 }
 @media screen and (min-width: 1440px) {
   .section {
@@ -882,6 +917,30 @@ footer .social-link:focus {
     max-width: 1158px;
     padding: 0 15px;
     margin: 0 auto;
+  }
+  .top {
+    padding: 24px;
+    height: 72px;
+  }
+  .top .container {
+    height: 24px;
+  }
+  .contacts {
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+  .top-contacts-list {
+    flex-direction: row;
+  }
+  .hero {
+    margin-top: 0;
+  }
+  .contacts-list {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #434455;
   }
   .advantages-list {
     flex-wrap: nowrap;
@@ -929,5 +988,18 @@ footer .social-link:focus {
   }
   .portfolio-info {
     max-width: 356px;
+  }
+  .footer .container {
+    max-width: 1125px;
+    flex-wrap: nowrap;
+    gap: 80px;
+    padding: 0;
+  }
+  .footer-left {
+    width: 264px;
+    margin-right: 40px;
+  }
+  .footer-text {
+    height: 72px;
   }
 }
