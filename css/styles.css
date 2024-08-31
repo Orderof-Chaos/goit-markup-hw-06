@@ -87,6 +87,11 @@ body {
   color: #404bbf;
 }
 
+.header-mobile-btn {
+  background-color: transparent;
+  border: none;
+}
+
 .section {
   margin-top: 96px;
   margin-bottom: 96px;
@@ -934,6 +939,9 @@ footer .social-link:focus {
   }
 }
 @media screen and (min-width: 768px) {
+  .header-mobile-btn {
+    display: none;
+  }
   .container {
     max-width: 736px;
     flex-wrap: wrap;
@@ -965,11 +973,7 @@ footer .social-link:focus {
     letter-spacing: 0.04em;
     color: #434455;
   }
-  .header-mobile-btn {
-    display: none;
-    background-color: transparent;
-    border: none;
-  }
+
   .hero .container {
     flex-direction: column;
   }
