@@ -12,6 +12,13 @@ body {
   align-items: center;
   display: flex;
 }
+img {
+  max-width: 100%;
+}
+picture {
+  flex-shrink: 0;
+  max-width: 100%;
+}
 
 .top-nav .logo {
   font-family: 'Raleway', sans-serif;
@@ -932,6 +939,20 @@ footer .social-link:focus {
 }
 
 /* #endregion backdrop-modal */
+
+@media screen and (-webkit-min-device-pixel-ratio: 2),
+  (min-resolution: 2dppx),
+  (min-resolution: 192dpi) {
+  .hero .container {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/mobile-dark-bg-2x.jpg);
+  }
+}
+
 @media screen and (max-width: 767px) {
   .top-nav-list {
     display: none;
@@ -943,6 +964,7 @@ footer .social-link:focus {
     flex-direction: row;
   }
 }
+
 @media screen and (min-width: 768px) {
   .header-mobile-btn {
     display: none;
@@ -952,6 +974,7 @@ footer .social-link:focus {
     flex-wrap: wrap;
     gap: 24px;
   }
+
   .top {
     height: 72px;
   }
@@ -988,6 +1011,18 @@ footer .social-link:focus {
         rgba(46, 47, 66, 0.7)
       ),
       url(../images/tablet-dark-bg.jpg);
+  }
+  @media (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 2dppx),
+    (min-resolution: 192dpi) {
+    .hero .container {
+      background-image: linear-gradient(
+          to bottom,
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url(../images/tablet-dark-bg-2x.jpg);
+    }
   }
   .main-title {
     max-width: 496px;
@@ -1063,6 +1098,7 @@ footer .social-link:focus {
     padding: 0 15px;
     margin: 0 auto;
   }
+
   .top {
     padding: 24px;
     height: 72px;
@@ -1088,6 +1124,18 @@ footer .social-link:focus {
         rgba(46, 47, 66, 0.7)
       ),
       url(../images/pc-dark-bg.jpg);
+  }
+  @media screen and (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 2dppx),
+    (min-resolution: 192dpi) {
+    .hero .container {
+      background-image: linear-gradient(
+          to bottom,
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url(../images/pc-dark-bg-2x.jpg);
+    }
   }
   .contacts-list {
     font-weight: 400;
