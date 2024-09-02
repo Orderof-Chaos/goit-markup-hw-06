@@ -7,6 +7,7 @@ body {
   border-bottom: 1px solid #e7e9fc;
   box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
+  padding: 16px;
 }
 .top-nav {
   align-items: center;
@@ -33,11 +34,10 @@ picture {
 
 .top-nav-list {
   list-style: none;
-  gap: 40px;
   display: flex;
+  gap: 40px;
 }
 .nav-list {
-  padding: 24px 0;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .nav-list:hover {
@@ -56,7 +56,7 @@ picture {
   width: 100%;
   position: absolute;
   left: 0;
-  bottom: -1px;
+  bottom: -24px;
   height: 4px;
   background-color: #404bbf;
   border-radius: 2px;
@@ -97,22 +97,18 @@ picture {
 .header-mobile-btn {
   background-color: transparent;
   border: none;
+  margin-left: auto;
 }
 
 .section {
-  margin-top: 96px;
-  margin-bottom: 96px;
+  padding: 96px 0;
   width: 100%;
 }
 
 .container {
-  max-width: 288px;
+  max-width: 320px;
   margin: 0 auto;
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  flex-direction: column;
-  gap: 72px;
+  padding: 0 16px;
 }
 header .container {
   display: flex;
@@ -271,13 +267,6 @@ ul {
 /*hero section*/
 
 .hero {
-  margin-top: 0;
-}
-
-.hero .container {
-  width: 320px;
-  color: #fff;
-  text-align: center;
   background-color: #2e2f42;
   background-repeat: no-repeat;
   background-position: 50% 50%;
@@ -289,7 +278,14 @@ ul {
     ),
     url(../images/mobile-dark-bg.jpg);
   padding: 72px 0;
-  height: 432px;
+  max-width: 320px;
+  margin: 0 auto;
+}
+
+.hero .container {
+  max-width: 320px;
+  color: #fff;
+  text-align: center;
 }
 
 .main-title {
@@ -302,6 +298,7 @@ ul {
   max-width: 216px;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 72px;
 }
 .hero-button {
   font-family: 'Roboto', sans-serif;
@@ -340,8 +337,6 @@ ul {
   margin-left: auto;
 }
 .advantages {
-  padding: 16px;
-  height: 696px;
 }
 .advantages-list {
   display: flex;
@@ -477,14 +472,12 @@ ul {
   justify-content: flex-start;
   flex-direction: column;
   gap: 48px;
-  max-width: 288px;
 }
 
 .portfolio-list-item {
   box-shadow: 0 1px 6px 0 rgba(46, 47, 66, 0.08);
   background: #fff;
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  max-width: 288px;
 }
 .portfolio-list-item:hover {
   box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
@@ -553,9 +546,11 @@ footer .container {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 72px;
 }
 
 .footer-logo {
+  font-family: 'Raleway', sans-serif;
   text-align: center;
   font-weight: 700;
   font-size: 18px;
@@ -594,6 +589,7 @@ footer .container {
   justify-content: center;
   align-items: center;
 }
+
 .footer-social-text {
   font-weight: 500;
   font-size: 16px;
@@ -601,6 +597,7 @@ footer .container {
   letter-spacing: 0.02em;
   color: #ffffff;
   margin-bottom: 16px;
+  text-align: center;
 }
 footer .social-contacts {
   gap: 16px;
@@ -631,6 +628,7 @@ footer .social-link:focus {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #fff;
+  text-align: center;
 }
 
 .subscribe-form {
@@ -653,6 +651,12 @@ footer .social-link:focus {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   padding-left: 16px;
+  opacity: 0.6;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.subscribe-input:hover,
+.subscribe-input:focus {
+  opacity: 1;
 }
 
 .subscribe-input::placeholder {
@@ -943,6 +947,14 @@ footer .social-link:focus {
 @media screen and (-webkit-min-device-pixel-ratio: 2),
   (min-resolution: 2dppx),
   (min-resolution: 192dpi) {
+  .hero {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/mobile-dark-bg-2x.jpg);
+  }
   .hero .container {
     background-image: linear-gradient(
         to bottom,
@@ -986,7 +998,6 @@ footer .social-link:focus {
     flex-direction: column;
   }
   .top-contacts-list {
-    height: 40px;
     gap: 12px;
   }
 
@@ -1001,21 +1012,24 @@ footer .social-link:focus {
     letter-spacing: 0.04em;
     color: #434455;
   }
-
-  .hero .container {
-    flex-direction: column;
-    width: 768px;
+  .hero {
     background-image: linear-gradient(
         to bottom,
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
       ),
       url(../images/tablet-dark-bg.jpg);
+    padding: 112px 0;
+    max-width: 768px;
+  }
+  .hero .container {
+    flex-direction: column;
+    width: 768px;
   }
   @media (-webkit-min-device-pixel-ratio: 2),
     (min-resolution: 2dppx),
     (min-resolution: 192dpi) {
-    .hero .container {
+    .hero {
       background-image: linear-gradient(
           to bottom,
           rgba(46, 47, 66, 0.7),
@@ -1028,9 +1042,9 @@ footer .social-link:focus {
     max-width: 496px;
     font-size: 56px;
     line-height: 1.07;
+    margin-bottom: 36px;
   }
   .advantages {
-    height: 312px;
   }
   .advantages-list {
     flex-direction: row;
@@ -1052,26 +1066,32 @@ footer .social-link:focus {
     row-gap: 64px;
     justify-content: center;
   }
+  .portfolio .container {
+    padding: 0;
+  }
   .portfolio-list {
     flex-direction: row;
     flex-wrap: wrap;
     gap: 24px;
     row-gap: 72px;
-    max-width: 736px;
+    justify-content: center;
   }
   .portfolio-list-item {
-    max-width: 356px;
+    max-width: calc((100% - 24px) / 2);
   }
   footer .container {
     flex-direction: row;
     flex-wrap: wrap;
-    align-items: flex-start;
+    max-width: 496px;
   }
   .footer-logo {
     margin: 0 0 16px 0;
   }
   .subscribe-box {
     width: 453px;
+  }
+  .subscribe-text {
+    text-align: left;
   }
   .subscribe-form {
     flex-direction: row;
@@ -1088,10 +1108,22 @@ footer .social-link:focus {
     min-height: 584px;
   }
 }
+@media screen and (min-width: 768px) and (max-width: 1439px) {
+  .footer .container {
+    justify-content: start;
+  }
+}
 @media screen and (min-width: 1440px) {
+  .section-subtitle {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+  }
+  .section-text {
+    font-weight: 400;
+  }
   .section {
-    margin-top: 120px;
-    margin-bottom: 120px;
   }
   .container {
     max-width: 1158px;
@@ -1114,21 +1146,22 @@ footer .social-link:focus {
     flex-direction: row;
   }
   .hero {
-    margin-top: 0;
-  }
-  .hero .container {
-    width: 1440px;
     background-image: linear-gradient(
         to bottom,
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
       ),
       url(../images/pc-dark-bg.jpg);
+    padding: 188px 0;
+    max-width: 1440px;
+  }
+  .hero .container {
+    width: 1440px;
   }
   @media screen and (-webkit-min-device-pixel-ratio: 2),
     (min-resolution: 2dppx),
     (min-resolution: 192dpi) {
-    .hero .container {
+    .hero {
       background-image: linear-gradient(
           to bottom,
           rgba(46, 47, 66, 0.7),
@@ -1136,6 +1169,9 @@ footer .social-link:focus {
         ),
         url(../images/pc-dark-bg-2x.jpg);
     }
+  }
+  .main-title {
+    margin-bottom: 48px;
   }
   .contacts-list {
     font-weight: 400;
@@ -1181,15 +1217,13 @@ footer .social-link:focus {
   }
 
   .portfolio-list {
-    max-width: 1128px;
     row-gap: 48px;
   }
 
   .portfolio-list-item {
-    max-width: 456px;
+    max-width: calc((100% - 48px) / 3);
   }
   .portfolio-info {
-    max-width: 356px;
   }
   .footer .container {
     max-width: 1125px;
